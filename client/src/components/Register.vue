@@ -3,7 +3,7 @@
     <v-layout>
       <v-flex xs6 offset-xs3>
         <div class="elevation-2">
-          <v-toolbar class="light-blue mt-10" dark>
+          <v-toolbar class="primary mt-10" dark>
             <v-toolbar-title>Register</v-toolbar-title>
           </v-toolbar>
 
@@ -30,7 +30,7 @@
                 dark
               />
               <br />
-              <v-btn class="light-blue" dark type="submit" @click="register"
+              <v-btn class="primary light--text" type="submit" @click="register"
                 >Register</v-btn
               >
             </form>
@@ -58,6 +58,8 @@ export default {
           email: this.email,
           password: this.password
         });
+        this.error = null; // clear errors if any existed
+        alert(`User Account Created Sucessfully for ${this.email}!`); // notify user of adding
       } catch (error) {
         this.error = error.response.data.error;
       }

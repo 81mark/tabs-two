@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-content>
+      <Header />
       <Register />
     </v-content>
   </v-app>
@@ -8,16 +9,16 @@
 
 <script>
 import Register from "./components/Register";
+import Header from "./components/Header";
 
 export default {
   name: "App",
 
   components: {
-    Register
+    Register,
+    Header
   },
 
-  data: () => ({
-    //
-  })
+  data: () => ({})
 };
 </script>

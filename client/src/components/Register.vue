@@ -7,7 +7,7 @@
         </v-toolbar>
         <div class="pl-4 pr-4 pt-2 pb-2">
           <form v-on:submit.prevent>
-            <v-text-field label="E-mail" type="email" v-model="email" /><br />
+            <v-text-field label="E-mail" type="email" v-model="email" />
             <v-text-field
               label="Password"
               type="password"

@@ -1,9 +1,9 @@
 <template>
-  <v-layout v-if="$route.name === 'register'">
+  <v-layout v-if="$route.name === 'login'">
     <v-flex xs6 offset-xs3>
       <div class="elevation-2">
         <v-toolbar class="primary mt-10" dark>
-          <v-toolbar-title>Register</v-toolbar-title>
+          <v-toolbar-title>Login</v-toolbar-title>
         </v-toolbar>
         <div class="pl-4 pr-4 pt-2 pb-2">
           <form v-on:submit.prevent>
@@ -20,8 +20,8 @@
               dark
             />
             <br />
-            <v-btn class="primary light--text" type="submit" @click="register"
-              >Register</v-btn
+            <v-btn class="primary light--text" type="submit" @click="login"
+              >Login</v-btn
             >
           </form>
         </div>
@@ -41,14 +41,14 @@ export default {
     };
   },
   methods: {
-    async register() {
+    async login() {
       try {
-        await AuthenticationService.register({
+        await AuthenticationService.login({
           email: this.email,
           password: this.password
         });
         this.error = null; // clear errors if any existed
-        alert(`User Account Created Sucessfully for ${this.email}!`); // notify user of adding
+        alert(`Sucessfully Logged in with ${this.email}!`); // notify user of adding
       } catch (error) {
         this.error = error.response.data.error;
       }

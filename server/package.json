@@ -4,21 +4,26 @@
 	"description": "Server Backend",
 	"main": "index.js",
 	"scripts": {
-		"start": "node ./src/app.js"
+		"start": "node ./src/app.js",
+		"live": "nodemon ./src/app.js localhost 8081"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"bluebird": "^3.7.1",
 		"body-parser": "^1.19.0",
 		"cors": "^2.8.5",
 		"express": "^4.17.1",
 		"joi": "^14.3.1",
 		"morgan": "^1.9.1",
+		"nodemon": "^2.0.1",
 		"sequelize": "^5.21.2",
 		"sqlite": "^3.0.3"
 	},
 	"devDependencies": {
-		"eslint": "^6.6.0"
+		"eslint": "^6.6.0",
+		"jsonwebtoken": "^8.5.1"
 	}
 }

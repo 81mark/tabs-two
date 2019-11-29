@@ -19,10 +19,22 @@
       <v-list dark>
         <v-list-item @click="drawer = false">
           <v-list-item-icon>
-            <v-icon>mdi-run</v-icon>
+            <v-icon>mdi-routes</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title>Browse</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item @click="drawer = false">
+          <v-list-item-icon>
+            <v-icon>mdi-account-circle</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>
+              <router-link to="login" title="Login">
+                Login
+              </router-link>
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item @click="drawer = false">
